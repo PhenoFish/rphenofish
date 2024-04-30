@@ -26,6 +26,10 @@
 #' @export
 #' 
 #' @examples
+#' ## Attach packages ----
+#' library("rphenofish")
+#' library("ggplot2")
+#' 
 #' ## Path to example marine layer ----
 #' file_name <- system.file(file.path("extdata", "marine_fish_richness.gpkg"), 
 #'                          package = "rphenofish")
@@ -43,10 +47,7 @@
 #' marine_map
 #' 
 #' \dontrun{
-#' ## Attach ggplot2 package ----
-#' library("ggplot2")
-#' 
-#' ## Save map ----
+#' ## Save map in PNG ----
 #' ggsave(plot     = marine_map, 
 #'        filename = "marine_fish_richness.png",
 #'        width    = 20, 

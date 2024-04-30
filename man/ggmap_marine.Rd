@@ -32,6 +32,10 @@ Plots a marine spatially-explicit metric on a World map. Basemap layers
 projection (\code{EPSG = 54030}).
 }
 \examples{
+## Attach packages ----
+library("rphenofish")
+library("ggplot2")
+
 ## Path to example marine layer ----
 file_name <- system.file(file.path("extdata", "marine_fish_richness.gpkg"), 
                          package = "rphenofish")
@@ -49,10 +53,7 @@ marine_map <- ggmap_marine(data   = marine_fish_richness,
 marine_map
 
 \dontrun{
-## Attach ggplot2 package ----
-library("ggplot2")
-
-## Save map ----
+## Save map in PNG ----
 ggsave(plot     = marine_map, 
        filename = "marine_fish_richness.png",
        width    = 20, 
