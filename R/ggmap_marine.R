@@ -24,23 +24,27 @@
 #' @export
 #' 
 #' @examples
-#' # Path to example marine layer
+#' ## Path to example marine layer ----
 #' file_name <- system.file(file.path("extdata", "marine_fish_richness.gpkg"), 
 #'                          package = "rphenofish")
 #' 
-#' # Import example larine layer
-#' marine_fish_richness <- sf::st_read(file_name)
+#' ## Import example marine layer ----
+#' marine_fish_richness <- sf::st_read(file_name, quiet = TRUE)
+#'
 #' marine_fish_richness
 #'
-#' # Map marine fish richness
+#' ## Map marine fish richness ----
 #' marine_map <- ggmap_marine(data   = marine_fish_richness, 
 #'                            metric = "richness",
 #'                            title  = "Number of marine fish species")
+#'
 #' marine_map
 #' 
 #' \dontrun{
-#' # Save map
+#' ## Attach ggplot2 package ----
 #' library("ggplot2")
+#' 
+#' ## Save map ----
 #' ggsave(plot     = marine_map, 
 #'        filename = "marine_fish_richness.png",
 #'        width    = 20, 
