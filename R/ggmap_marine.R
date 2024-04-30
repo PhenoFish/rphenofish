@@ -40,7 +40,7 @@ ggmap_marine <- function(data, metric, title, palette) {
   error_if_not_length_of(title, 1)
   
   if (missing(palette)) {
-    palette <- viridisLite::viridis(n = 100, option = "turbo")
+    palette <- viridisLite::turbo(n = 100)
   }
   
   error_if_not_character(palette)
@@ -57,21 +57,23 @@ ggmap_marine <- function(data, metric, title, palette) {
   ggplot2::ggplot() +
     
     ggplot2::geom_sf(data = ne_bbox, fill = "#cdeafc", col = NA, 
-                     linewidth = 0.75) +
+                     linewidth = 0.10) +
     ggplot2::geom_sf(data = ne_graticules, col = "#bae2fb", 
                      linewidth = 0.10) +
     
-    ggplot2::geom_sf(data = data, ggplot2::aes(fill = .data[[metric]])) +
+    ggplot2::geom_sf(data = data, ggplot2::aes(fill = .data[[metric]]),
+                     col = "grey30") +
     
     ggplot2::scale_fill_gradientn(colours = palette, na.value = "dark") +
     
     ggplot2::geom_sf(data = ne_countries, fill = "#c0c0c0", col = "#c9c9c9", 
                      linewidth = 0.10) +
-    ggplot2::geom_sf(data = ne_world, fill = NA, linewidth = 0.10) +
+    ggplot2::geom_sf(data = ne_world, fill = NA, col = "grey30", 
+                     linewidth = 0.10) +
     
     ggplot2::geom_sf(data = ne_poles, fill = "white", col = "white") +
     ggplot2::geom_sf(data = ne_bbox, fill = NA, col = "#a6a6a6", 
-                     linewidth = 0.75) +
+                     linewidth = 0.10) +
     
     ggplot2::theme_void() +
     
