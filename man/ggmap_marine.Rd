@@ -26,7 +26,8 @@ A \code{ggplot} object.
 }
 \description{
 Plots a marine spatially-explicit metric on a World map. Basemap layers come
-from Natural Earth website \url{https://www.naturalearthdata.com/}.
+from Natural Earth website \url{https://www.naturalearthdata.com/}. The map
+is plotted in the Robinson projection (\code{EPSG = 54030}).
 }
 \examples{
 # Path to example marine layer
