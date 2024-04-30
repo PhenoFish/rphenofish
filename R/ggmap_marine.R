@@ -75,15 +75,15 @@ ggmap_marine <- function(data, metric, title = NULL,
   
   gg_map <- ggplot2::ggplot() +
     
+    ### Add layers ----
+  
     ggplot2::geom_sf(data = ne_bbox, fill = "#cdeafc", col = NA, 
                      linewidth = 0.10) +
     ggplot2::geom_sf(data = ne_graticules, col = "#bae2fb", 
                      linewidth = 0.10) +
     
     ggplot2::geom_sf(data = data, ggplot2::aes(fill = .data[[metric]]),
-                     col = "grey30") +
-    
-    ggplot2::scale_fill_gradientn(colours = palette, na.value = "dark") +
+                     col = "grey30", linewidth = 0.10) +
     
     ggplot2::geom_sf(data = ne_countries, fill = "#c0c0c0", col = "#c9c9c9", 
                      linewidth = 0.10) +
@@ -94,11 +94,22 @@ ggmap_marine <- function(data, metric, title = NULL,
     ggplot2::geom_sf(data = ne_bbox, fill = NA, col = "#a6a6a6", 
                      linewidth = 0.10) +
     
+    
+    ### Apply colors palette ----
+  
+    ggplot2::scale_fill_gradientn(colours = palette, na.value = "dark") +
+    
+    
+    ### Customize theme ----
+  
     ggplot2::theme_void() +
     
     ggplot2::theme(legend.position  = "bottom",
                    legend.key.width = ggplot2::unit(1.5, "cm"),
                    legend.title = ggplot2::element_text(face = "bold"))
+  
+  
+  ### Add map title ----
   
   if (!is.null(title)) {
     
