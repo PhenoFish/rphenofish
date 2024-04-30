@@ -71,6 +71,11 @@ ggmap_marine <- function(data, metric, title = NULL,
   
   error_if_field_not_in_df(data, metric)
   
+  if (!is.numeric(data[ , metric, drop = TRUE])) {
+    stop("The column '", metric, "' in 'data' must be `numeric`", 
+         call. = FALSE)
+  }
+  
   if (!is.null(title)) {
     error_if_not_character(title)
     error_if_not_length_of(title, 1)
