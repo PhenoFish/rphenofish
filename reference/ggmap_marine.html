@@ -96,7 +96,11 @@ Default is <code>NULL</code> (no title).</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Path to example marine layer ----</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Attach packages ----</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/PhenoFish/rphenofish" class="external-link">"rphenofish"</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://ggplot2.tidyverse.org" class="external-link">"ggplot2"</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Path to example marine layer ----</span></span></span>
 <span class="r-in"><span><span class="va">file_name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"marine_fish_richness.gpkg"</span><span class="op">)</span>, </span></span>
 <span class="r-in"><span>                         package <span class="op">=</span> <span class="st">"rphenofish"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
@@ -142,10 +146,7 @@ Default is <code>NULL</code> (no title).</p></dd>
 <span class="r-plt img"><img src="ggmap_marine-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span><span class="co">## Attach ggplot2 package ----</span></span></span>
-<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://ggplot2.tidyverse.org" class="external-link">"ggplot2"</a></span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Save map ----</span></span></span>
+<span class="r-in"><span><span class="co">## Save map in PNG ----</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html" class="external-link">ggsave</a></span><span class="op">(</span>plot     <span class="op">=</span> <span class="va">marine_map</span>, </span></span>
 <span class="r-in"><span>       filename <span class="op">=</span> <span class="st">"marine_fish_richness.png"</span>,</span></span>
 <span class="r-in"><span>       width    <span class="op">=</span> <span class="fl">20</span>, </span></span>
