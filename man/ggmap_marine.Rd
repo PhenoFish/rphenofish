@@ -4,7 +4,7 @@
 \alias{ggmap_marine}
 \title{Plot a spatial metric at the marine ecoregion level}
 \usage{
-ggmap_marine(data, metric, title = NULL, palette)
+ggmap_marine(data, metric, title = NULL, palette = viridisLite::turbo(n = 100))
 }
 \arguments{
 \item{data}{an \code{sf} object with the values of \code{metric} for each MEOW polygon

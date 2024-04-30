@@ -22,7 +22,8 @@
 #' @examples
 #' ## Add an example
 
-ggmap_marine <- function(data, metric, title = NULL, palette) {
+ggmap_marine <- function(data, metric, title = NULL, 
+                         palette = viridisLite::turbo(n = 100)) {
   
   
   ## Check args ----
@@ -39,10 +40,6 @@ ggmap_marine <- function(data, metric, title = NULL, palette) {
   if (!is.null(title)) {
     error_if_not_character(title)
     error_if_not_length_of(title, 1)
-  }
-  
-  if (missing(palette)) {
-    palette <- viridisLite::turbo(n = 100)
   }
   
   error_if_not_character(palette)
