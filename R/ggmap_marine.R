@@ -1,17 +1,19 @@
 #' World map of a marine spatial metric
 #' 
 #' @description
-#' Plots a marine spatially-explicit metric on a World map. Basemap layers come 
-#' from Natural Earth website \url{https://www.naturalearthdata.com/}. The map
-#' is plotted in the Robinson projection (`EPSG = 54030`).
+#' Plots a marine spatially-explicit metric on a World map. Basemap layers 
+#' (continents, oceans, graticules) come from the Natural Earth website 
+#' \url{https://www.naturalearthdata.com/}. The map is plotted in the Robinson 
+#' projection (`EPSG = 54030`).
 #' 
 #' @param data an `sf` object. The spatial layer (`POLYGONS`, `POINTS`, etc.) 
 #'   containing the variable `metric` for which values are to be mapped. For 
-#'   aesthetic purposes, this layer should contains only marine values. 
+#'   aesthetic purposes, this layer should contain only marine values 
+#'   (terrestrial polygons will be masked by the continent layer). 
 #'   See `ggmap_freshwater()` for mapping a freshwater (or terrestrial) layer.
 #'
 #' @param metric a `character` of length 1. The column in `data` for which 
-#'   values are to be mapped.
+#'   values are to be mapped. This variable must be numeric.
 #' 
 #' @param title a `character` of length 1. The title of the map (legend title).
 #'   Default is `NULL` (no title).

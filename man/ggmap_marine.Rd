@@ -9,11 +9,12 @@ ggmap_marine(data, metric, title = NULL, palette = viridisLite::turbo(n = 100))
 \arguments{
 \item{data}{an \code{sf} object. The spatial layer (\code{POLYGONS}, \code{POINTS}, etc.)
 containing the variable \code{metric} for which values are to be mapped. For
-aesthetic purposes, this layer should contains only marine values.
+aesthetic purposes, this layer should contain only marine values
+(terrestrial polygons will be masked by the continent layer).
 See \code{ggmap_freshwater()} for mapping a freshwater (or terrestrial) layer.}
 
 \item{metric}{a \code{character} of length 1. The column in \code{data} for which
-values are to be mapped.}
+values are to be mapped. This variable must be numeric.}
 
 \item{title}{a \code{character} of length 1. The title of the map (legend title).
 Default is \code{NULL} (no title).}
@@ -25,9 +26,10 @@ Default is \code{NULL} (no title).}
 A \code{ggplot} object.
 }
 \description{
-Plots a marine spatially-explicit metric on a World map. Basemap layers come
-from Natural Earth website \url{https://www.naturalearthdata.com/}. The map
-is plotted in the Robinson projection (\code{EPSG = 54030}).
+Plots a marine spatially-explicit metric on a World map. Basemap layers
+(continents, oceans, graticules) come from the Natural Earth website
+\url{https://www.naturalearthdata.com/}. The map is plotted in the Robinson
+projection (\code{EPSG = 54030}).
 }
 \examples{
 ## Path to example marine layer ----
