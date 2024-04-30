@@ -39,7 +39,19 @@ marine_fish_richness <- sf::st_read(file_name)
 marine_fish_richness
 
 # Map marine fish richness
-ggmap_marine(data   = marine_fish_richness, 
-             metric = "richness",
-             title  = "Number of marine fish species")
+marine_map <- ggmap_marine(data   = marine_fish_richness, 
+                           metric = "richness",
+                           title  = "Number of marine fish species")
+marine_map
+
+\dontrun{
+# Save map
+ggplot2::ggsave(plot     = marine_map, 
+                filename = "marine_fish_richness.png",
+                width    = 20, 
+                height   = 13, 
+                units    = "cm", 
+                dpi      = 300, 
+                bg       = "white")
+}
 }
