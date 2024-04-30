@@ -46,12 +46,13 @@ marine_map
 
 \dontrun{
 # Save map
-ggplot2::ggsave(plot     = marine_map, 
-                filename = "marine_fish_richness.png",
-                width    = 20, 
-                height   = 13, 
-                units    = "cm", 
-                dpi      = 300, 
-                bg       = "white")
+library("ggplot2")
+ggsave(plot     = marine_map, 
+       filename = "marine_fish_richness.png",
+       width    = 20, 
+       height   = 13, 
+       units    = "cm", 
+       dpi      = 300, 
+       bg       = "white")
 }
 }
