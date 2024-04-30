@@ -1,19 +1,22 @@
-#' Plot a spatial metric at the marine ecoregion level
+#' World map of a marine spatial metric
 #' 
 #' @description
-#' Represents a spatially-explicit metric on a World map at the marine 
-#' ecoregions scale.
+#' Plots a marine spatially-explicit metric on a World map. Basemap layers come 
+#' from Natural Earth website \url{https://www.naturalearthdata.com/}.
 #' 
-#' @param data an `sf` object with the values of `metric` for each MEOW polygon
-#'   (in rows).
+#' @param data an `sf` object. The spatial layer (`POLYGONS`, `POINTS`, etc.) 
+#'   containing the variable `metric` for which values are to be mapped. For 
+#'   aesthetic purposes, this layer should contains only marine values. 
+#'   See `ggmap_freshwater()` for mapping a freshwater (or terrestrial) layer.
 #'
-#' @param metric a `character` of length 1. The column in `data` to map.
+#' @param metric a `character` of length 1. The column in `data` for which 
+#'   values are to be mapped.
 #' 
 #' @param title a `character` of length 1. The title of the map (legend title).
 #'   Default is `NULL` (no title).
 #' 
 #' @param palette a `character` of colors used to categorize the values of 
-#'   `metric`. Default is `viridisLite::turbo()`.
+#'   `metric`. Default is `viridisLite::turbo()` with 100 colors.
 #' 
 #' @return A `ggplot` object.
 #' 

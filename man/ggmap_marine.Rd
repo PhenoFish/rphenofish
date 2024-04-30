@@ -2,28 +2,31 @@
 % Please edit documentation in R/ggmap_marine.R
 \name{ggmap_marine}
 \alias{ggmap_marine}
-\title{Plot a spatial metric at the marine ecoregion level}
+\title{World map of a marine spatial metric}
 \usage{
 ggmap_marine(data, metric, title = NULL, palette = viridisLite::turbo(n = 100))
 }
 \arguments{
-\item{data}{an \code{sf} object with the values of \code{metric} for each MEOW polygon
-(in rows).}
+\item{data}{an \code{sf} object. The spatial layer (\code{POLYGONS}, \code{POINTS}, etc.)
+containing the variable \code{metric} for which values are to be mapped. For
+aesthetic purposes, this layer should contains only marine values.
+See \code{ggmap_freshwater()} for mapping a freshwater (or terrestrial) layer.}
 
-\item{metric}{a \code{character} of length 1. The column in \code{data} to map.}
+\item{metric}{a \code{character} of length 1. The column in \code{data} for which
+values are to be mapped.}
 
 \item{title}{a \code{character} of length 1. The title of the map (legend title).
 Default is \code{NULL} (no title).}
 
 \item{palette}{a \code{character} of colors used to categorize the values of
-\code{metric}. Default is \code{viridisLite::turbo()}.}
+\code{metric}. Default is \code{viridisLite::turbo()} with 100 colors.}
 }
 \value{
 A \code{ggplot} object.
 }
 \description{
-Represents a spatially-explicit metric on a World map at the marine
-ecoregions scale.
+Plots a marine spatially-explicit metric on a World map. Basemap layers come
+from Natural Earth website \url{https://www.naturalearthdata.com/}.
 }
 \examples{
 ## Add an example
