@@ -45,10 +45,16 @@ ggmap_marine <- function(data, metric, title = NULL,
   error_if_not_character(palette)
   
   
-  ## Correct and convert data ----
+  ## Correct MEOW polygons ----
   
   data <- correct_meow(data)
-  data <- sf::st_transform(data, crs = sf::st_crs(ne_bbox))
+  
+  
+  ## Project CRS if required ----
+  
+  if (sf::st_crs(data) != sf::st_crs(ne_bbox)) {
+    data <- sf::st_transform(data, crs = sf::st_crs(ne_bbox))  
+  }
   
   
   ## Make map ----
