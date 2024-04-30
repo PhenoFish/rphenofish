@@ -23,7 +23,18 @@
 #' @export
 #' 
 #' @examples
-#' ## Add an example
+#' # Path to example marine layer
+#' file_name <- system.file(file.path("extdata", "marine_fish_richness.gpkg"), 
+#'                          package = "rphenofish")
+#' 
+#' # Import example larine layer
+#' marine_fish_richness <- sf::st_read(file_name)
+#' marine_fish_richness
+#'
+#' # Map marine fish richness
+#' ggmap_marine(data   = marine_fish_richness, 
+#'              metric = "richness",
+#'              title  = "Number of marine fish species")
 
 ggmap_marine <- function(data, metric, title = NULL, 
                          palette = viridisLite::turbo(n = 100)) {

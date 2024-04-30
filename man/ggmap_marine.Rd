@@ -29,5 +29,16 @@ Plots a marine spatially-explicit metric on a World map. Basemap layers come
 from Natural Earth website \url{https://www.naturalearthdata.com/}.
 }
 \examples{
-## Add an example
+# Path to example marine layer
+file_name <- system.file(file.path("extdata", "marine_fish_richness.gpkg"), 
+                         package = "rphenofish")
+
+# Import example larine layer
+marine_fish_richness <- sf::st_read(file_name)
+marine_fish_richness
+
+# Map marine fish richness
+ggmap_marine(data   = marine_fish_richness, 
+             metric = "richness",
+             title  = "Number of marine fish species")
 }
