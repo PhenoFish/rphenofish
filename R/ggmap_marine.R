@@ -9,7 +9,8 @@
 #'
 #' @param metric a `character` of length 1. The column in `data` to map.
 #' 
-#' @param title a `character` of length 1.
+#' @param title a `character` of length 1. The title of the map (legend title).
+#'   Default is `NULL` (no title).
 #' 
 #' @param palette a `character` of colors used to categorize the values of 
 #'   `metric`. Default is `viridisLite::turbo()`.
@@ -21,7 +22,7 @@
 #' @examples
 #' ## Add an example
 
-ggmap_marine <- function(data, metric, title, palette) {
+ggmap_marine <- function(data, metric, title = NULL, palette) {
   
   
   ## Check args ----
@@ -35,9 +36,10 @@ ggmap_marine <- function(data, metric, title, palette) {
   
   error_if_field_not_in_df(data, metric)
   
-  error_if_missing(title)
-  error_if_not_character(title)
-  error_if_not_length_of(title, 1)
+  if (!is.null(title)) {
+    error_if_not_character(title)
+    error_if_not_length_of(title, 1)
+  }
   
   if (missing(palette)) {
     palette <- viridisLite::turbo(n = 100)
@@ -54,7 +56,7 @@ ggmap_marine <- function(data, metric, title, palette) {
   
   ## Make map ----
   
-  ggplot2::ggplot() +
+  gg_map <- ggplot2::ggplot() +
     
     ggplot2::geom_sf(data = ne_bbox, fill = "#cdeafc", col = NA, 
                      linewidth = 0.10) +
@@ -79,10 +81,22 @@ ggmap_marine <- function(data, metric, title, palette) {
     
     ggplot2::theme(legend.position  = "bottom",
                    legend.key.width = ggplot2::unit(1.5, "cm"),
-                   legend.title = ggplot2::element_text(face = "bold")) +
+                   legend.title = ggplot2::element_text(face = "bold"))
+  
+  if (!is.null(title)) {
     
-    ggplot2::labs(fill = title) + 
+    gg_map <- gg_map +
+      
+      ggplot2::labs(fill = title) + 
+      
+      ggplot2::guides(fill = ggplot2::guide_colorbar(title.position = "top", 
+                                                     title.hjust = 0.5))
+  } else {
     
-    ggplot2::guides(fill = ggplot2::guide_colorbar(title.position = "top", 
-                                                   title.hjust = 0.5))
+    gg_map <- gg_map +
+      
+      ggplot2::theme(legend.title = ggplot2::element_blank())
+  }
+    
+  gg_map
 }

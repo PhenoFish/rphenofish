@@ -4,7 +4,7 @@
 \alias{ggmap_marine}
 \title{Plot a spatial metric at the marine ecoregion level}
 \usage{
-ggmap_marine(data, metric, title, palette)
+ggmap_marine(data, metric, title = NULL, palette)
 }
 \arguments{
 \item{data}{an \code{sf} object with the values of \code{metric} for each MEOW polygon
@@ -12,7 +12,8 @@ ggmap_marine(data, metric, title, palette)
 
 \item{metric}{a \code{character} of length 1. The column in \code{data} to map.}
 
-\item{title}{a \code{character} of length 1.}
+\item{title}{a \code{character} of length 1. The title of the map (legend title).
+Default is \code{NULL} (no title).}
 
 \item{palette}{a \code{character} of colors used to categorize the values of
 \code{metric}. Default is \code{viridisLite::turbo()}.}
