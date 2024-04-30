@@ -10,8 +10,8 @@ ggmap_marine(data, metric, title = NULL, palette = viridisLite::turbo(n = 100))
 \item{data}{an \code{sf} object. The spatial layer (\code{POLYGONS}, \code{POINTS}, etc.)
 containing the variable \code{metric} for which values are to be mapped. For
 aesthetic purposes, this layer should contain only marine values
-(terrestrial polygons will be masked by the continent layer).
-See \code{ggmap_freshwater()} for mapping a freshwater (or terrestrial) layer.}
+(terrestrial areas will be masked by the continent layer).
+See \code{ggmap_terrestrial()} for mapping a freshwater (or terrestrial) layer.}
 
 \item{metric}{a \code{character} of length 1. The column in \code{data} for which
 values are to be mapped. This variable must be numeric.}

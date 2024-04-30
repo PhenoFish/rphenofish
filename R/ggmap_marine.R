@@ -9,8 +9,8 @@
 #' @param data an `sf` object. The spatial layer (`POLYGONS`, `POINTS`, etc.) 
 #'   containing the variable `metric` for which values are to be mapped. For 
 #'   aesthetic purposes, this layer should contain only marine values 
-#'   (terrestrial polygons will be masked by the continent layer). 
-#'   See `ggmap_freshwater()` for mapping a freshwater (or terrestrial) layer.
+#'   (terrestrial areas will be masked by the continent layer). 
+#'   See `ggmap_terrestrial()` for mapping a freshwater (or terrestrial) layer.
 #'
 #' @param metric a `character` of length 1. The column in `data` for which 
 #'   values are to be mapped. This variable must be numeric.
