@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>/articles/rphenofish.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/articles/index.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/articles/rphenofish.html</loc>
   </url>
   <url>
-    <loc>/reference/ggmap_marine.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/authors.html</loc>
   </url>
   <url>
-    <loc>/reference/ggmap_terrestrial.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/index.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/news/index.html</loc>
   </url>
   <url>
-    <loc>/reference/rphenofish-package.html</loc>
+    <loc>https://phenofish.github.io/rphenofish/reference/ggmap_marine.html</loc>
+  </url>
+  <url>
+    <loc>https://phenofish.github.io/rphenofish/reference/ggmap_terrestrial.html</loc>
+  </url>
+  <url>
+    <loc>https://phenofish.github.io/rphenofish/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://phenofish.github.io/rphenofish/reference/rphenofish-package.html</loc>
   </url>
 </urlset>
