@@ -1,6 +1,7 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rphenofish <img src="man/figures/package-sticker.png" align="right" style="float:right; height:120px;"/>
+# rphenofish <img src="man/figures/logo.png" align="right" style="float:right; height:120px;"/>
 
 <!-- badges: start -->
 
@@ -12,7 +13,7 @@ coverage](https://github.com/PhenoFish/rphenofish/actions/workflows/test-coverag
 [![codecov](https://codecov.io/gh/PhenoFish/rphenofish/branch/main/graph/badge.svg)](https://codecov.io/gh/PhenoFish/rphenofish)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rphenofish)](https://CRAN.R-project.org/package=rphenofish)
-[![License: GPL (&gt;=
+[![License: GPL (\>=
 2)](https://img.shields.io/badge/License-GPL%20%28%3E%3D%202%29-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
 [![Dependencies](https://img.shields.io/badge/dependencies-0/0-brightgreen?style=flat)](#)
 <!-- badges: end -->
@@ -25,12 +26,16 @@ The goal of the R package `rphenofish` is to **{{ PLEASE ADD A FEW LINES
 You can install the development version from
 [GitHub](https://github.com/) with:
 
-    # install.packages("remotes")
-    remotes::install_github("PhenoFish/rphenofish")
+``` r
+# install.packages("remotes")
+remotes::install_github("PhenoFish/rphenofish")
+```
 
 Then you can attach the package `rphenofish`:
 
-    library("rphenofish")
+``` r
+library("rphenofish")
+```
 
 ## Overview
 
@@ -41,7 +46,7 @@ Here is an overview of `rphenofish` content: **{{ PLEASE ADD A FEW LINES
 
 Please cite this package as:
 
-> Casajus Nicolas (2023) rphenofish: An R package to **{{ TITLE }}**. R
+> Casajus Nicolas (2024) rphenofish: An R package to **{{ TITLE }}**. R
 > package version 0.0.0.9000.
 
 ## Code of Conduct
