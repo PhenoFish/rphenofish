@@ -4,20 +4,27 @@
 \name{rphenofish-package}
 \alias{rphenofish}
 \alias{rphenofish-package}
-\title{rphenofish: The Title of the Project}
+\title{rphenofish: An R Client to Access the PHENOFISH Database}
 \description{
-A paragraph providing a full description of the project (on several lines...)
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
+Provides an interface to the PHENOFISH database biodiversity, morphology, behaviour and ecophysiology of World marine and freshwater fishes. This package allows to download and to handle PHENOFISH data. It is part of the FRB-CESAB working group PHENOFISH. \url{https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/phenofish/}.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/PhenoFish/rphenofish}
-  \item Report bugs at \url{https://github.com/PhenoFish/rphenofish/issues}
+  \item \url{https://phenofish.github.io/rphenofish}
+  \item Report bugs at \url{https://github.com/phenofish/rphenofish/issues}
 }
 
 }
 \author{
 \strong{Maintainer}: Nicolas Casajus \email{nicolas.casajus@fondationbiodiversite.fr} (\href{https://orcid.org/0000-0002-5537-5294}{ORCID}) [copyright holder]
+
+Authors:
+\itemize{
+  \item Nicolas Loiseau \email{nicolas.loiseau@cnrs.fr} (\href{https://orcid.org/0000-0002-2469-1980}{ORCID})
+}
 
 }
 \keyword{internal}

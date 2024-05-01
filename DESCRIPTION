@@ -1,22 +1,29 @@
 Package: rphenofish
 Type: Package
-Title: The Title of the Project
+Title: An R Client to Access the PHENOFISH Database
 Version: 0.0.0.9000
 Authors@R: c(
     person(given   = "Nicolas",
            family  = "Casajus",
            role    = c("aut", "cre", "cph"),
            email   = "nicolas.casajus@fondationbiodiversite.fr",
-           comment = c(ORCID = "0000-0002-5537-5294")))
-Description: A paragraph providing a full description of the project (on 
-    several lines...)
-URL: https://github.com/PhenoFish/rphenofish
-BugReports: https://github.com/PhenoFish/rphenofish/issues
+           comment = c(ORCID = "0000-0002-5537-5294")),
+    person(given   = "Nicolas",
+           family  = "Loiseau",
+           role    = "aut",
+           email   = "nicolas.loiseau@cnrs.fr",
+           comment = c(ORCID = "0000-0002-2469-1980")))
+Description: Provides an interface to the PHENOFISH database biodiversity, 
+    morphology, behaviour and ecophysiology of World marine and freshwater 
+    fishes. This package allows to download and to handle PHENOFISH data.
+    It is part of the FRB-CESAB working group PHENOFISH.
+    <https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/phenofish/>.
+URL: https://phenofish.github.io/rphenofish
+BugReports: https://github.com/phenofish/rphenofish/issues
 License: GPL (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
-Config/testthat/edition: 3
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)
@@ -29,3 +36,4 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
+Config/testthat/edition: 3

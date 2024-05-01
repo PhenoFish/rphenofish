@@ -2,9 +2,9 @@ citHeader("To cite rphenofish in publications use:")
 
 bibentry(
   bibtype = "Manual",
-  title   = "rphenofish: {An} {R} package to ...",
-  author  = c(person("Casajus Nicolas")),
-  year    = "2023",
+  title   = "rphenofish: {An} {R} Client to Access the {PHENOFISH} Database",
+  author  = c(person("Casajus Nicolas"), person("Loiseau Nicolas")),
+  year    = "2024",
   note    = "R package version 0.0.0.9000",
-  url     = "https://github.com/PhenoFish/rphenofish"
+  url     = "https://phenofish.github.io/rphenofish"
 )
