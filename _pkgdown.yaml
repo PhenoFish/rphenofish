@@ -1,0 +1,15 @@
+url: https://phenofish.github.io/rphenofish
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#2b4370"
+
+reference:
+
+- title: Visualization tools
+  desc: >
+    Functions to visualize PhenoFish data
+  contents:
+    - ggmap_marine
+    - ggmap_terrestrial
