@@ -20,11 +20,9 @@ rphenofish <img src="man/figures/logo.png" align="right" style="float:right; hei
 <!-- badges: start -->
 [![R CMD Check](https://github.com/PhenoFish/rphenofish/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PhenoFish/rphenofish/actions/workflows/R-CMD-check.yaml)
 [![Website](https://github.com/PhenoFish/rphenofish/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/PhenoFish/rphenofish/actions/workflows/pkgdown.yaml)
-[![Test coverage](https://github.com/PhenoFish/rphenofish/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/PhenoFish/rphenofish/actions/workflows/test-coverage.yaml)
 [![codecov](https://codecov.io/gh/PhenoFish/rphenofish/branch/main/graph/badge.svg)](https://codecov.io/gh/PhenoFish/rphenofish)
 [![CRAN status](https://www.r-pkg.org/badges/version/rphenofish)](https://CRAN.R-project.org/package=rphenofish)
 [![License: GPL (>= 2)](https://img.shields.io/badge/License-GPL%20%28%3E%3D%202%29-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
-[![Dependencies](https://img.shields.io/badge/dependencies-0/0-brightgreen?style=flat)](#)
 <!-- badges: end -->
 
 
