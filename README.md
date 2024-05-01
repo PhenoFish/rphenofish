@@ -15,8 +15,32 @@ status](https://www.r-pkg.org/badges/version/rphenofish)](https://CRAN.R-project
 2)](https://img.shields.io/badge/License-GPL%20%28%3E%3D%202%29-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)
 <!-- badges: end -->
 
-The goal of the R package `rphenofish` is to **{{ PLEASE ADD A FEW LINES
-}}**
+## Table of contents
+
+<p align="left">
+• <a href="#overview">Overview</a><br> •
+<a href="#features">Features</a><br> •
+<a href="#installation">Installation</a><br> •
+<a href="#get-started">Get started</a><br> •
+<a href="#documentation">Documentation</a><br> •
+<a href="#citation">Citation</a><br> •
+<a href="#contributing">Contributing</a><br> •
+<a href="#acknowledgments">Acknowledgments</a><br> •
+<a href="#references">References</a>
+</p>
+
+## Overview
+
+The goal of the R package `rphenofish` is to provide an interface to the
+PhenoFish database. **{{ ADD A FEW LINES }}**
+
+## Features
+
+The main purpose of the `rphenofish` package is to download, select,
+filter, homogenize, and visualize PhenoFish data. The
+[References](https://phenofish.github.io/rphenofish/reference/index.html)
+page provides a full description of the features available in the
+package.
 
 ## Installation
 
@@ -24,7 +48,12 @@ You can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("remotes")
+## Install < remotes > package (if not already installed) ----
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+
+## Install dev version of < rphenofish > from GitHub ----
 remotes::install_github("PhenoFish/rphenofish")
 ```
 
@@ -34,21 +63,49 @@ Then you can attach the package `rphenofish`:
 library("rphenofish")
 ```
 
-## Overview
+## Get started
 
-Here is an overview of `rphenofish` content: **{{ PLEASE ADD A FEW LINES
-}}**
+For an overview of the main features of `rphenofish`, please read the
+[Get
+started](https://phenofish.github.io/rphenofish/articles/rphenofish.html)
+vignette.
+
+## Documentation
+
+`rphenofish` provides **{{ XX }}** vignettes to learn more about the
+package:
+
+- the [Get
+  started](https://phenofish.github.io/rphenofish/articles/rphenofish.html)
+  vignette describes the core features of the package
 
 ## Citation
 
 Please cite this package as:
 
-> Casajus Nicolas (2024) rphenofish: An R package to **{{ TITLE }}**. R
-> package version 0.0.0.9000.
+> Casajus N & Loiseau N (2024) rphenofish: An R client to access the
+> PhenoFish database. R package version 0.0.0.9000. URL:
+> <https://phenofish.github.io/rphenofish/>.
 
-## Code of Conduct
+## Contributing
+
+All types of contributions are encouraged and valued. For more
+information, check out our [Contributor
+Guidelines](https://github.com/phenofish/rphenofish/blob/main/CONTRIBUTING.md).
 
 Please note that the `rphenofish` project is released with a
 [Contributor Code of
-Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
+
+## Acknowledgments
+
+This package has been developed for the
+[FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
+working group
+[PHENOFISH](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/phenofish/)
+that aims to pool data on the biodiversity, morphology, behaviour and
+ecophysiology of marine and freshwater fishes that have never before
+been brought together.
+
+## References
