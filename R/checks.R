@@ -89,8 +89,8 @@ error_if_not_length_of <- function(x, n = 1) {
   }
   
   if (length(x) != n) {
-    stop("Argument '", deparse(substitute(x)), "' must be of length ",
-         deparse(substitute(n)), call. = FALSE)
+    stop("Argument '", deparse(substitute(x)), "' must be of length ", n, 
+         call. = FALSE)
   }
   
   invisible(NULL)  
