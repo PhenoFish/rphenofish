@@ -87,7 +87,7 @@ ggmap_marine <- function(data, metric, title = NULL,
   
   ## Correct MEOW polygons ----
   
-  data <- correct_meow(data)
+  data <- correct_meow_polygons(data)
   
   
   ## Project CRS if required ----

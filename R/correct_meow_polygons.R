@@ -11,7 +11,7 @@
 #' 
 #' @noRd
 
-correct_meow <- function(meow) {
+correct_meow_polygons <- function(meow) {
   
   wrong_polygons <- c("Fiji Islands", "Gilbert/Ellis Islands")
   
