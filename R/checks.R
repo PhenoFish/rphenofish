@@ -168,7 +168,10 @@ error_if_na <- function(x) {
 
 error_if_not_strictly_positive <- function(x) {
   
-  if (x <= 0) {
+  error_if_not_numeric(x)
+  error_if_na(x)
+  
+  if (any(x <= 0)) {
     stop("Argument '", deparse(substitute(x)), "' must be strictly positive", 
          call. = FALSE)
   }
