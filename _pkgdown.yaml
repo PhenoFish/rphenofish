@@ -7,9 +7,16 @@ template:
 
 reference:
 
+- title: Download data
+  desc: >
+    Functions to download PHENOFISH data
+  contents:
+    - get_marine_ecoregions_layer
+    - get_drainage_basins_layer
+
 - title: Visualization tools
   desc: >
-    Functions to visualize PhenoFish data
+    Functions to visualize PHENOFISH data
   contents:
     - ggmap_marine
     - ggmap_terrestrial
