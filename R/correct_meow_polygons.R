@@ -16,7 +16,7 @@ correct_meow_polygons <- function(data) {
   
   error_if_not_sf(data)
   error_if_field_not_in_df(data, "ECOREGION")
-  
+   
   
   ## Correct polygons ----
   
@@ -26,8 +26,16 @@ correct_meow_polygons <- function(data) {
   
   if (length(pos) > 0) {
     
+    ## Check CRS ----
+    
+    if (sf::st_crs(data)$"input" != "WGS 84") {
+      stop("Spatial layer 'data' must be defined in the WGS 84 system", 
+           call. = FALSE)
+    }
+    
+
     new_lines <- data.frame()
-  
+    
     for (i in 1:length(pos)) {
       
       attrs  <- sf::st_drop_geometry(data[pos[i], ])

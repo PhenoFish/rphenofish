@@ -9,6 +9,8 @@ good_data <- sf::st_read(system.file(file.path("extdata",
 wrong_polygons <- c("Fiji Islands", "Gilbert/Ellis Islands")
 ready_data <- good_data[!(good_data$"ECOREGION" %in% wrong_polygons), ]
 
+bad_data_crs <- sf::st_transform(good_data, crs = sf::st_crs(ne_bbox))
+
 
 ### Tests for errors ----
 
@@ -20,6 +22,10 @@ test_that("Test correct_meow_polygons() for error", {
   
   expect_error(correct_meow_polygons(good_data[ , -2]),
                "The column listed in '\"ECOREGION\"' is absent from 'data'",
+               fixed = TRUE)
+  
+  expect_error(correct_meow_polygons(bad_data_crs),
+               "Spatial layer 'data' must be defined in the WGS 84 system",
                fixed = TRUE)
 })
 
