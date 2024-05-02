@@ -4,7 +4,7 @@
 \alias{get_marine_ecoregions_layer}
 \title{Download marine ecoregions of the World (MEOW) spatial layer}
 \usage{
-get_marine_ecoregions_layer(path = ".", overwrite = FALSE, timeout = 60)
+get_marine_ecoregions_layer(path = ".", overwrite = FALSE, timeout = 60, ...)
 }
 \arguments{
 \item{path}{a \code{character} of length 1. The path to the folder to save the
@@ -15,6 +15,8 @@ Default is \code{FALSE}.}
 
 \item{timeout}{an \code{integer}. The timeout for downloading files.
 Default is \code{60}. This number can be increased for slow Internet connection.}
+
+\item{...}{other arguments to pass to \code{download.file()} (e.g. \code{headers}).}
 }
 \value{
 No return value. Files will be written in \code{path}.

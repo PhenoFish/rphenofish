@@ -13,7 +13,9 @@
 #'   
 #' @param timeout an `integer`. The timeout for downloading files. 
 #'   Default is `60`. This number can be increased for slow Internet connection.
-#'
+#'   
+#' @param ... other arguments to pass to `download.file()` (e.g. `headers`).
+#'   
 #' @return No return value. Files will be written in `path`.
 #' 
 #' @export
@@ -30,7 +32,7 @@
 #' }
 
 get_marine_ecoregions_layer <- function(path = ".", overwrite = FALSE, 
-                                        timeout = 60) {
+                                        timeout = 60, ...) {
   
   
   ## Check path ----
@@ -86,7 +88,7 @@ get_marine_ecoregions_layer <- function(path = ".", overwrite = FALSE,
     utils::download.file(url      = paste0(baseurl, zipname),
                          destfile = file.path(path, zipname), 
                          mode     = "wb",
-                         quiet    = TRUE)
+                         quiet    = TRUE, ...)
     
     
     ## Extract files in ZIP ----
