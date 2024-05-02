@@ -78,6 +78,7 @@ package:
 - the [Get
   started](https://phenofish.github.io/rphenofish/articles/rphenofish.html)
   vignette describes the core features of the package
+- other vignettes will come soon
 
 ## Citation
 

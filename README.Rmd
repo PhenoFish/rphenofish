@@ -89,6 +89,7 @@ For an overview of the main features of `rphenofish`, please read the [Get start
 `rphenofish` provides **{{ XX }}** vignettes to learn more about the package:
 
 - the [Get started](https://phenofish.github.io/rphenofish/articles/rphenofish.html) vignette describes the core features of the package
+- other vignettes will come soon
 
 
 
