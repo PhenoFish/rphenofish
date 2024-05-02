@@ -1,3 +1,7 @@
+#' Return an error if the argument is missing
+#' 
+#' @noRd
+
 error_if_missing <- function(x) {
   
   if (missing(x)) {
@@ -8,6 +12,11 @@ error_if_missing <- function(x) {
 }
 
 
+
+
+#' Return an error if the argument is not an sf object
+#' 
+#' @noRd
 
 error_if_not_sf <- function(x) {
   
@@ -26,6 +35,11 @@ error_if_not_sf <- function(x) {
 
 
 
+
+#' Return an error if a column is absent from a data.frame
+#' 
+#' @noRd
+
 error_if_field_not_in_df <- function(data, field) {
   
   if (length(field) != 1) {
@@ -43,6 +57,11 @@ error_if_field_not_in_df <- function(data, field) {
 
 
 
+
+#' Return an error if the argument is not a character
+#' 
+#' @noRd
+
 error_if_not_character <- function(x) {
  
   if (!is.character(x)) {
@@ -54,6 +73,10 @@ error_if_not_character <- function(x) {
 }
 
 
+
+#' Return an error if the argument is not of length n
+#' 
+#' @noRd
 
 error_if_not_length_of <- function(x, n = 1) {
 
