@@ -11,7 +11,9 @@ ggmap_marine(data, metric, title = NULL, palette = viridisLite::turbo(n = 100))
 containing the variable \code{metric} for which values are to be mapped. For
 aesthetic purposes, this layer should contain only marine values
 (terrestrial areas will be masked by the continent layer).
-See \code{ggmap_terrestrial()} for mapping a freshwater (or terrestrial) layer.}
+See \code{ggmap_terrestrial()} for mapping a freshwater (or terrestrial) layer.
+This spatial layer must be defined in the WGS84 coordinate system
+(\code{EPSG=4326}).}
 
 \item{metric}{a \code{character} of length 1. The column in \code{data} for which
 values are to be mapped. This variable must be numeric.}
