@@ -3,7 +3,7 @@ pkgdown: 2.0.9
 pkgdown_sha: ~
 articles:
   rphenofish: rphenofish.html
-last_built: 2024-05-01T08:15Z
+last_built: 2024-05-02T07:17Z
 urls:
   reference: https://phenofish.github.io/rphenofish/reference
   article: https://phenofish.github.io/rphenofish/articles
