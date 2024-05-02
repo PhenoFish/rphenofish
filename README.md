@@ -32,12 +32,12 @@ status](https://www.r-pkg.org/badges/version/rphenofish)](https://CRAN.R-project
 ## Overview
 
 The goal of the R package `rphenofish` is to provide an interface to the
-PhenoFish database. **{{ ADD A FEW LINES }}**
+PHENOFISH database. **{{ ADD A FEW LINES }}**
 
 ## Features
 
 The main purpose of the `rphenofish` package is to download, select,
-filter, homogenize, and visualize PhenoFish data. The
+filter, homogenize, and visualize PHENOFISH data. The
 [References](https://phenofish.github.io/rphenofish/reference/index.html)
 page provides a full description of the features available in the
 package.
@@ -85,7 +85,7 @@ package:
 Please cite this package as:
 
 > Casajus N & Loiseau N (2024) rphenofish: An R client to access the
-> PhenoFish database. R package version 0.0.0.9000. URL:
+> PHENOFISH database. R package version 0.0.0.9000. URL:
 > <https://phenofish.github.io/rphenofish/>.
 
 ## Contributing
@@ -110,3 +110,5 @@ ecophysiology of marine and freshwater fishes that have never before
 been brought together.
 
 ## References
+
+…
